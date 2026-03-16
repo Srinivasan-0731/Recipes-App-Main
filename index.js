@@ -2,9 +2,16 @@ const Express = require('express');
 const mongoose = require('mongoose');
 const { createDbConnection } = require('./dbConnection');
 const recipeController = require("./controller/recipes.controller");
-const recipeModel = require("./model/recipes.model");
 
-// create DB connection
+require('dotenv').config();
+
+const API_Server = Express();
+
+API_Server.use(Express.json());
+
+//  CORS add pannunga (important for render)
+const cors = require("cors");
+API_Server.use(cors());
 
 createDbConnection()
     .then(() => {
@@ -14,18 +21,7 @@ createDbConnection()
         console.error('Failed to connect to MongoDB', error);
     });
 
-//Environment variables
-require('dotenv').config();
-
-//Create a API server
-const API_Server = Express();
-
-//passing incoming request body as a json
-API_Server.use(Express.json());
-
-//Inject router
 API_Server.use('/recipes', recipeController);
-
 
 API_Server.get('/', function (req, res) {
     return res.json({
@@ -34,8 +30,9 @@ API_Server.get('/', function (req, res) {
     });
 });
 
-// Start and Listen incoming requests
-API_Server.listen(process.env.PORT, process.env.HOSTNAME, function () {
-    console.log("Server started");
-    console.log(`http://${process.env.HOSTNAME}:${process.env.PORT}`)
+//  render correct port
+const PORT = process.env.PORT || 4000;
+
+API_Server.listen(PORT, () => {
+    console.log("Server started on port " + PORT);
 });
