@@ -1,0 +1,70 @@
+Recipes App
+﻿
+
+DELETE
+http://localhost:4000/recipes/6719420a04dc29c53c6b5d91
+http://localhost:4000/recipes/6719420a04dc29c53c6b5d91
+﻿
+
+Body
+raw (json)
+View More
+json
+{
+    "recipeName": "Tacos Food",
+  "description": "Crispy tacos with seasoned ground beef and fresh toppings.",
+  "ingredients": ["1 pound ground beef", "1 packet taco seasoning", "8 taco shells", "1 cup shredded lettuce", "1/2 cup diced tomatoes", 
+                "1/2 cup shredded cheddar cheese", "Sour cream and salsa for serving"],
+  "instructions": ["Cook the ground beef in a skillet over medium heat until browned.",
+                 "Stir in the taco seasoning and cook according to the packet instructions.",
+                 "Fill the taco shells with seasoned beef, then top with lettuce, tomatoes, cheese, sour cream, and salsa."]
+}
+PATCH
+http://localhost:4000/recipes/6719420a04dc29c53c6b5d91
+http://localhost:4000/recipes/6719420a04dc29c53c6b5d91
+﻿
+
+Body
+raw (json)
+View More
+json
+{
+    "recipeName": "Tacos Food",
+  "description": "Crispy tacos with seasoned ground beef and fresh toppings.",
+  "ingredients": ["1 pound ground beef", "1 packet taco seasoning", "8 taco shells", "1 cup shredded lettuce", "1/2 cup diced tomatoes", 
+                "1/2 cup shredded cheddar cheese", "Sour cream and salsa for serving"],
+  "instructions": ["Cook the ground beef in a skillet over medium heat until browned.",
+                 "Stir in the taco seasoning and cook according to the packet instructions.",
+                 "Fill the taco shells with seasoned beef, then top with lettuce, tomatoes, cheese, sour cream, and salsa."]
+}
+POST
+http://localhost:4000/recipes
+http://localhost:4000/recipes
+﻿
+
+Body
+raw (json)
+View More
+json
+{
+    "recipeName": "Tacos",
+  "description": "Crispy tacos with seasoned ground beef and fresh toppings.",
+  "ingredients": ["1 pound ground beef", "1 packet taco seasoning", "8 taco shells", "1 cup shredded lettuce", "1/2 cup diced tomatoes", 
+                "1/2 cup shredded cheddar cheese", "Sour cream and salsa for serving"],
+  "instructions": ["Cook the ground beef in a skillet over medium heat until browned.",
+                 "Stir in the taco seasoning and cook according to the packet instructions.",
+                 "Fill the taco shells with seasoned beef, then top with lettuce, tomatoes, cheese, sour cream, and salsa."]
+}
+GET
+http://localhost:4000/recipes/67193c887e03643cb45f6f69
+http://localhost:4000/recipes/67193c887e03643cb45f6f69
+﻿
+
+GET
+http://localhost:4000/recipes
+http://localhost:4000/recipes
+﻿
+
+GET
+http://localhost:4000
+http://localhost:4000
